@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="500" fill="#121318"/>
+  <rect x="20" y="20" width="360" height="460" fill="#1a1c22" stroke="#3d352e" stroke-width="1.5"/>
+  <g transform="translate(100, 70)">
+    <!-- Broad Shoulders, Double Breasted Suit -->
+    <path d="M-45 330 C -25 210, 55 200, 100 200 C 145 200, 225 210, 245 330 Z" fill="#11131a"/>
+    <!-- Sharp Lapels -->
+    <polygon points="60,200 85,270 100,220" fill="#202430"/>
+    <polygon points="140,200 115,270 100,220" fill="#181b24"/>
+    <polygon points="85,200 100,230 115,200" fill="#eae5dc"/>
+    <polygon points="96,215 104,215 100,280" fill="#6b1d22"/>
+    <!-- Gold Pocket Square & Pen -->
+    <rect x="45" y="270" width="22" height="4" fill="#d4af37"/>
+    <!-- Head -->
+    <rect x="85" y="160" width="30" height="45" fill="#bd9072"/>
+    <ellipse cx="100" cy="115" rx="39" ry="51" fill="#d6a785"/>
+    <path d="M 100,64 C 123,64 139,87 139,115 C 139,143 123,166 100,166 Z" fill="#754e35" opacity="0.6"/>
+    <!-- Slicked back hair -->
+    <path d="M 58 100 C 60 50, 80 32, 105 32 C 135 32, 144 55, 142 100 C 135 60, 115 50, 100 50 C 75 50, 65 70, 58 100 Z" fill="#201c18"/>
+    <!-- Intense ruthless brow -->
+    <path d="M 70 102 L 94 107" stroke="#261c16" stroke-width="3"/>
+    <path d="M 106 107 L 130 102" stroke="#18110d" stroke-width="3"/>
+    <ellipse cx="82" cy="112" rx="3.8" ry="2.5" fill="#261c16"/>
+    <ellipse cx="118" cy="112" rx="3.8" ry="2.5" fill="#18110d"/>
+    <!-- Thin severe mouth -->
+    <line x1="84" y1="145" x2="116" y2="143" stroke="#4a2e1f" stroke-width="3"/>
+  </g>
+  <g transform="translate(170, 390) rotate(-6)">
+    <rect x="-5" y="-16" width="195" height="34" fill="none" stroke="#d63031" stroke-width="2" stroke-dasharray="6 3" rx="3"/>
+    <text x="6" y="7" class="stamp-red" font-size="14">BUSINESS PARTNER</text>
+  </g>
+  <text x="35" y="450" class="noir-label">SUSPECT #2 // MARCUS VALE</text>
+  <text x="35" y="468" class="noir-label" font-size="10" fill="#887f73">ALIBI: DEPARTED MANOR AT 10:15 PM</text>
+
+  <rect width="400" height="500" fill="url(#vignette)" pointer-events="none"/>
+</svg>

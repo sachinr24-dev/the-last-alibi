@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="500" fill="#121318"/>
+  <rect x="20" y="20" width="360" height="460" fill="#1c1d24" stroke="#3d352e" stroke-width="1.5"/>
+  <!-- Ambient background shadow & bookcase silhouette -->
+  <rect x="35" y="40" width="120" height="240" fill="#14151b" opacity="0.6"/>
+  <line x1="35" y1="80" x2="155" y2="80" stroke="#252733" stroke-width="2"/>
+  <line x1="35" y1="130" x2="155" y2="130" stroke="#252733" stroke-width="2"/>
+  <line x1="35" y1="180" x2="155" y2="180" stroke="#252733" stroke-width="2"/>
+  
+  <!-- Silhouette Portrait of Victor -->
+  <g transform="translate(100, 70)">
+    <!-- Shoulders / Suit -->
+    <path d="M-40 330 C -20 220, 60 210, 100 210 C 140 210, 220 220, 240 330 Z" fill="#0c0d11"/>
+    <!-- Collar & Tie -->
+    <polygon points="75,210 125,210 100,285" fill="#f0ebe1" opacity="0.9"/>
+    <polygon points="94,225 106,225 100,285" fill="#1a1c23"/>
+    <polygon points="65,210 80,245 100,240" fill="#ded7ca"/>
+    <polygon points="135,210 120,245 100,240" fill="#b8b0a2"/>
+    <line x1="50" y1="260" x2="80" y2="290" stroke="#d4af37" stroke-width="2"/>
+    <circle cx="50" cy="260" r="3" fill="#d4af37"/>
+    <!-- Neck -->
+    <rect x="82" y="170" width="36" height="50" fill="#c49a78"/>
+    <rect x="100" y="170" width="18" height="50" fill="#87654b"/>
+    <!-- Head & Face -->
+    <ellipse cx="100" cy="120" rx="42" ry="54" fill="#d8af8c"/>
+    <!-- Shadow side of face -->
+    <path d="M 100,66 C 125,66 142,90 142,120 C 142,150 125,174 100,174 Z" fill="#7a543b" opacity="0.65"/>
+    <!-- Silver Temples / Hair -->
+    <path d="M 58 115 C 55 70, 75 40, 100 40 C 130 40, 145 65, 144 110 C 135 75, 115 65, 100 65 C 80 65, 65 80, 58 115 Z" fill="#cbd1d8"/>
+    <!-- Distinguished Moustache & Jaw -->
+    <path d="M 75 142 Q 100 148 125 142 Q 100 156 75 142" fill="#adb5bd"/>
+    <!-- Brow & Eyes -->
+    <path d="M 72 105 L 92 108" stroke="#4a3b32" stroke-width="3"/>
+    <path d="M 108 108 L 128 105" stroke="#362922" stroke-width="3"/>
+    <ellipse cx="82" cy="114" rx="4" ry="2.5" fill="#2d221c"/>
+    <ellipse cx="118" cy="114" rx="4" ry="2.5" fill="#1b140f"/>
+    <!-- Nose bridge -->
+    <line x1="100" y1="108" x2="98" y2="132" stroke="#684731" stroke-width="2.5"/>
+    <!-- Venetian Blind Shadow Effect -->
+    <g opacity="0.15">
+      <rect x="-60" y="-30" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="5" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="40" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="75" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="110" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="145" width="320" height="15" fill="#000"/>
+      <rect x="-60" y="180" width="320" height="15" fill="#000"/>
+    </g>
+  </g>
+  <!-- Red Stamp -->
+  <g transform="translate(190, 390) rotate(-12)">
+    <rect x="-10" y="-18" width="180" height="36" fill="none" stroke="#d63031" stroke-width="2.5" stroke-dasharray="8 3" rx="4"/>
+    <text x="5" y="6" class="stamp-red" font-size="16">DECEASED</text>
+  </g>
+  <text x="35" y="450" class="noir-label">VICTIM // VICTOR BLACKWOOD</text>
+  <text x="35" y="468" class="noir-label" font-size="10" fill="#887f73">FOUND: STUDY // 11:47 PM</text>
+
+  <rect width="400" height="500" fill="url(#vignette)" pointer-events="none"/>
+</svg>

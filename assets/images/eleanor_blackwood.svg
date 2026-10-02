@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="500" fill="#121318"/>
+  <rect x="20" y="20" width="360" height="460" fill="#1a1c22" stroke="#3d352e" stroke-width="1.5"/>
+  <g transform="translate(100, 70)">
+    <!-- Silk Evening Wrap / Shoulders -->
+    <path d="M-30 330 C -15 220, 50 205, 100 205 C 150 205, 215 220, 230 330 Z" fill="#0b0c10"/>
+    <!-- Pearl Necklace -->
+    <path d="M 68 215 Q 100 255 132 215" fill="none" stroke="#eae4d8" stroke-width="4" stroke-dasharray="2 7"/>
+    <!-- Neck -->
+    <rect x="86" y="165" width="28" height="48" fill="#d9ad8b"/>
+    <rect x="100" y="165" width="14" height="48" fill="#9e7355"/>
+    <!-- Head & Face -->
+    <ellipse cx="100" cy="115" rx="38" ry="50" fill="#e8c2a2"/>
+    <path d="M 100,65 C 122,65 138,87 138,115 C 138,143 122,165 100,165 Z" fill="#8e5e3f" opacity="0.5"/>
+    <!-- Coiffed 1940s Vintage Dark Hair -->
+    <path d="M 52 120 C 48 65, 75 35, 100 35 C 132 35, 152 68, 146 135 C 138 95, 128 55, 96 55 C 68 55, 58 85, 52 120 Z" fill="#1c1917"/>
+    <path d="M 50 115 C 40 145, 55 175, 68 180 C 60 160, 55 135, 60 115 Z" fill="#1c1917"/>
+    <path d="M 148 115 C 158 145, 143 175, 130 180 C 138 160, 143 135, 138 115 Z" fill="#141210"/>
+    <!-- Cold, Poised Expression: Red Lips, Eyebrows -->
+    <path d="M 72 100 Q 84 94 94 100" stroke="#2b201a" stroke-width="2.5" fill="none"/>
+    <path d="M 106 100 Q 116 94 128 100" stroke="#1d1612" stroke-width="2.5" fill="none"/>
+    <ellipse cx="83" cy="107" rx="3.5" ry="2.5" fill="#2d221c"/>
+    <ellipse cx="117" cy="107" rx="3.5" ry="2.5" fill="#1b140f"/>
+    <!-- Crimson lips -->
+    <path d="M 85 142 Q 100 138 115 142 Q 100 152 85 142" fill="#9e2a2b"/>
+    <!-- Shadow slashes -->
+    <line x1="-30" y1="90" x2="230" y2="150" stroke="#000" stroke-width="12" opacity="0.2"/>
+    <line x1="-30" y1="130" x2="230" y2="190" stroke="#000" stroke-width="12" opacity="0.2"/>
+  </g>
+  <g transform="translate(170, 390) rotate(8)">
+    <rect x="-5" y="-16" width="195" height="34" fill="none" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="6 3" rx="3"/>
+    <text x="8" y="7" class="stamp-red" fill="#d4af37" font-size="14">ESTRANGED WIFE</text>
+  </g>
+  <text x="35" y="450" class="noir-label">SUSPECT #1 // ELEANOR BLACKWOOD</text>
+  <text x="35" y="468" class="noir-label" font-size="10" fill="#887f73">ALIBI: MANOR LIBRARY (10:30 PM - 12:00 AM)</text>
+
+  <rect width="400" height="500" fill="url(#vignette)" pointer-events="none"/>
+</svg>

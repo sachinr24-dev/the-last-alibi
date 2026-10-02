@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="300" fill="#12141a"/>
+  <!-- CRT Monitor Frame -->
+  <rect x="25" y="15" width="350" height="270" rx="12" fill="#20242e" stroke="#485366" stroke-width="3"/>
+  <rect x="40" y="30" width="320" height="230" rx="6" fill="#09140e" stroke="#163824" stroke-width="2"/>
+  <!-- Terminal scan lines and phosphor text -->
+  <text x="55" y="60" class="tech-text" font-size="12" fill="#48bb78">TERMINAL AUDIT SYSTEM // HOST: SEC-EAST-01</text>
+  <line x1="55" y1="68" x2="340" y2="68" stroke="#163824" stroke-width="1"/>
+  <text x="55" y="90" class="tech-text" fill="#a0aec0">LOGON: 21:04:12 [USER: CREED_ADMIN]</text>
+  <text x="55" y="110" class="tech-text" fill="#a0aec0">ACTIVE WINDOW: ACCOUNTS_PAYABLE.XLS</text>
+  <text x="55" y="130" class="tech-text" fill="#a0aec0">IDLE DETECTED: 23:28:00</text>
+  <text x="55" y="160" class="tech-text" fill="#fc8181" font-weight="bold">&gt;&gt; KEYSTROKE RESUMED: 23:41:19</text>
+  <text x="55" y="180" class="tech-text" fill="#feb2b2">&gt;&gt; FILE_EXPORT: C:\OFFSHORE\TRANSFER_EVID.ZIP</text>
+  <text x="55" y="200" class="tech-text" fill="#feb2b2">&gt;&gt; DISK WRITE CONFIRMED: 23:43:02</text>
+  <text x="55" y="230" class="tech-text" fill="#ecc94b">NOTE: USER ACTIVE AT 11:41 PM (CONTRADICTS 11:30 ALIBI)</text>
+
+  <rect width="400" height="300" fill="url(#vignette)" pointer-events="none"/>
+</svg>

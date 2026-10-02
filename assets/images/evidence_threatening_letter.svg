@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="300" fill="#12141a"/>
+  <!-- Vintage Parchment Paper -->
+  <g transform="translate(60, 30) rotate(-2)">
+    <rect width="280" height="230" fill="#eadecc" stroke="#baa68b" stroke-width="2" rx="2"/>
+    <!-- Torn/Burned Edge -->
+    <path d="M 0 0 L 280 0 L 280 230 L 0 230 Z" fill="none"/>
+    <!-- Header -->
+    <text x="25" y="35" font-family="serif" font-size="14" fill="#3c2f23" font-style="italic">Private &amp; Confidential</text>
+    <line x1="25" y1="42" x2="255" y2="42" stroke="#baa68b" stroke-width="1"/>
+    <!-- Typewriter text -->
+    <text x="25" y="70" class="paper-text" font-weight="bold">Victor,</text>
+    <text x="25" y="95" class="paper-text">If you present those balance sheets to</text>
+    <text x="25" y="115" class="paper-text">the authorities on Monday morning,</text>
+    <text x="25" y="135" class="paper-text">neither of us walks away from this intact.</text>
+    <text x="25" y="165" class="paper-text" font-weight="bold" fill="#782323">Consider this your final settlement offer.</text>
+    <!-- Red Wax Seal remnant -->
+    <circle cx="230" cy="195" r="18" fill="#8b1c1c"/>
+    <circle cx="230" cy="195" r="14" fill="#691414" stroke="#aa2b2b" stroke-width="1"/>
+    <text x="224" y="200" font-family="serif" font-size="14" fill="#dfadad" font-weight="bold">V</text>
+  </g>
+  <!-- Evidence Tag -->
+  <rect x="20" y="220" width="120" height="60" fill="#e2d9cc" stroke="#a09280" rx="3"/>
+  <text x="30" y="240" font-family="monospace" font-size="10" fill="#2d3748" font-weight="bold">EXHIBIT #02</text>
+  <text x="30" y="258" font-family="monospace" font-size="9" fill="#c53030">FOUND IN BLOTTER</text>
+
+  <rect width="400" height="300" fill="url(#vignette)" pointer-events="none"/>
+</svg>

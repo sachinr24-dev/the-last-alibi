@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="in" />
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#694e07"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242831"/>
+      <stop offset="100%" stop-color="#0c0e12"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .stamp-red { font-family: 'Courier New', monospace; font-weight: 900; fill: #d63031; letter-spacing: 2px; }
+    .noir-label { font-family: 'Courier New', monospace; fill: #dcd4c7; font-size: 13px; letter-spacing: 1.5px; }
+    .tech-text { font-family: monospace; fill: #00ffcc; font-size: 11px; }
+    .paper-text { font-family: 'Georgia', serif; font-size: 12px; fill: #2c251e; }
+  </style>
+  
+  <rect width="400" height="300" fill="#12141a"/>
+  <!-- Official Subpoena Carrier Record Sheet -->
+  <g transform="translate(40, 20)">
+    <rect width="320" height="260" fill="#f7fafc" stroke="#cbd5e0" stroke-width="1.5" rx="3"/>
+    <text x="20" y="30" font-family="monospace" font-size="11" fill="#2d3748" font-weight="bold">METRO TELECOM // SUBPOENA RETURN</text>
+    <text x="20" y="45" font-family="monospace" font-size="9" fill="#718096">SUBSCRIBER: DANIEL CROSS | MOB: +1 (555) 019-4821</text>
+    <line x1="20" y1="55" x2="300" y2="55" stroke="#e2e8f0" stroke-width="1.5"/>
+    
+    <!-- Table Header -->
+    <rect x="20" y="65" width="280" height="20" fill="#edf2f7"/>
+    <text x="25" y="79" font-family="monospace" font-size="8" fill="#4a5568" font-weight="bold">TIME</text>
+    <text x="80" y="79" font-family="monospace" font-size="8" fill="#4a5568" font-weight="bold">TARGET / RECIPIENT</text>
+    <text x="220" y="79" font-family="monospace" font-size="8" fill="#4a5568" font-weight="bold">DURATION</text>
+    
+    <!-- Row 1 -->
+    <text x="25" y="105" font-family="monospace" font-size="9" fill="#2d3748">23:02:11</text>
+    <text x="80" y="105" font-family="monospace" font-size="9" fill="#2d3748">+44 20 7946 0192 (Broker)</text>
+    <text x="220" y="105" font-family="monospace" font-size="9" fill="#2d3748">16m 33s</text>
+    
+    <!-- Red highlight box on disconnection -->
+    <rect x="18" y="118" width="284" height="42" fill="#fff5f5" stroke="#e53e3e" stroke-width="1.5" rx="2"/>
+    <text x="25" y="135" font-family="monospace" font-size="9" fill="#c53030" font-weight="bold">23:18:44  -- CALL TERMINATED BY CALLER --</text>
+    <text x="25" y="152" font-family="monospace" font-size="8" fill="#e53e3e">NO CALL ACTIVITY RECORDED BETWEEN 11:18 AND 11:45 PM</text>
+    
+    <!-- Detective stamp -->
+    <g transform="translate(140, 185) rotate(-6)">
+      <rect width="150" height="30" fill="none" stroke="#e53e3e" stroke-width="2" rx="3"/>
+      <text x="8" y="20" font-family="monospace" font-size="12" fill="#e53e3e" font-weight="bold">ALIBI CONTRADICTED</text>
+    </g>
+    <text x="25" y="245" font-family="monospace" font-size="8" fill="#718096">CERTIFIED BY DETECTIVE DIVISION // EVIDENCE LOCKER</text>
+  </g>
+
+  <rect width="400" height="300" fill="url(#vignette)" pointer-events="none"/>
+</svg>
